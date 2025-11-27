@@ -23,7 +23,7 @@ function Copy({ value = "" }: copyProps) {
     console.log("i call");
   }, [value]);
   return (
-    <div className="absolute h-6 w-6 right-5 top-5 z-1" onClick={handleCopy}>
+    <div className="absolute h-6 w-6 right-5 top-9 z-3" onClick={handleCopy}>
       {!isCopy ? (
         <motion.div
           key="copy"
