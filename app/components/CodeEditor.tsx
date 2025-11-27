@@ -1,5 +1,9 @@
 "use client";
-import { Editor } from "@monaco-editor/react";
+import dynamic from "next/dynamic";
+
+const MonacoEditor =dynamic(() => import("@monaco-editor/react"), {
+  ssr: false,
+});
 
 export type EditorProps = {
   value: string;
@@ -9,7 +13,7 @@ export type EditorProps = {
 function CodeEditor({ value, setValue }: EditorProps) {
   return (
     <div className="flex-1">
-      <Editor
+      <MonacoEditor
         defaultLanguage="json"
         theme="vs-dark"
         value={value}
