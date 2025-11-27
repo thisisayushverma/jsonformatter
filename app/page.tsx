@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import ConversionButton from "./components/ConversionButton";
 import CodeEditor from "./components/CodeEditor";
 import Copy from "./components/Copy";
+import { jsonToCsv } from "./utils/jsonToCsv";
 
 export default function Home() {
   const [inputJson, setInputJson] = useState<any>("");
@@ -30,6 +31,21 @@ export default function Home() {
     }
   };
 
+  const downloadCsv = () => {
+    try {
+      const parsed = JSON.parse(inputJson);
+      const result = jsonToCsv(Array.isArray(parsed) ? parsed : [parsed]);
+      const blob = new Blob([result], { type: "text/csv" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "output.csv";
+      link.click();
+    } catch (err) {
+      alert("❌ Invalid JSON format");
+    }
+  };
+
   useEffect(() => {
     handleJSONFormatter();
   }, [inputJson]);
@@ -48,6 +64,8 @@ export default function Home() {
           <ConversionButton label="Beautify" onClick={handleJSONFormatter} />
 
           <ConversionButton label="Minify" onClick={handleMinify} />
+
+          <ConversionButton label="Download CSV" onClick={downloadCsv} />
         </div>
 
         {/* Editor Box grows automatically */}
