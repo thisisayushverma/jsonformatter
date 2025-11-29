@@ -4,12 +4,16 @@ import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
-const MonacoEditor =dynamic(() => import("@monaco-editor/react"), {
+const MonacoEditor = dynamic(() => import("@monaco-editor/react"), {
   ssr: false,
 });
 
+export type EditorProps = {
+  value: string;
+  setValue: (v: string | JSON) => void;
+};
 
-export default function CodeEditor() {
+export default function CodeEditor({ value, setValue }: EditorProps) {
   const { resolvedTheme } = useTheme();
 
   // useEffect(() => {
@@ -21,5 +25,13 @@ export default function CodeEditor() {
   //   }
   // }, [resolvedTheme]); // runs every time theme changes
 
-  return <MonacoEditor height="90vh" defaultLanguage="json" theme={resolvedTheme === "dark" ? "vs-dark" : "light"} />;
+  return (
+    <MonacoEditor
+      height="90vh"
+      value={value}
+      onChange={(v: any) => setValue(v || "")}
+      defaultLanguage="json"
+      theme={resolvedTheme === "dark" ? "vs-dark" : "light"}
+    />
+  );
 }
