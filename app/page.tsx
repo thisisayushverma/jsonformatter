@@ -5,6 +5,7 @@ import ConversionButton from "./components/ConversionButton";
 import CodeEditor from "./components/CodeEditor";
 import Copy from "./components/Copy";
 import { jsonToCsv } from "./utils/jsonToCsv";
+import ThemeSwitch from "./components/ThemeSwitch";
 
 export default function Home() {
   const [inputJson, setInputJson] = useState<any>("");
@@ -52,7 +53,11 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full p-2 flex flex-col">
-      <h1 className="text-2xl font-bold mb-3">JSON Formatter</h1>
+      <div className="flex justify-between items-center px-4 py-2">
+        <h1 className="text-2xl font-bold mb-3">JSON Formatter</h1>
+        <ThemeSwitch/>
+      </div>
+      
 
       {/* Parent flex container */}
       <div className="flex flex-1 gap-2">

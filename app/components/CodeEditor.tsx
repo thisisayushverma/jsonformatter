@@ -1,32 +1,25 @@
 "use client";
+import * as monaco from "monaco-editor";
+import { useTheme } from "next-themes";
+import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
 const MonacoEditor =dynamic(() => import("@monaco-editor/react"), {
   ssr: false,
 });
 
-export type EditorProps = {
-  value: string;
-  setValue: (v: string | JSON) => void;
-};
 
-function CodeEditor({ value, setValue }: EditorProps) {
-  return (
-    <div className="flex-1">
-      <MonacoEditor
-        defaultLanguage="json"
-        theme="vs-dark"
-        value={value}
-        onChange={(v: any) => setValue(v || "")}
-        options={{
-          minimap: { enabled: false },
-          fontSize: 14,
-          scrollBeyondLastLine: false,
-          wordWrap: "on",
-        }}
-      />
-    </div>
-  );
+export default function CodeEditor() {
+  const { resolvedTheme } = useTheme();
+
+  // useEffect(() => {
+  //   // when NextTheme changes -> update Monaco theme
+  //   if (resolvedTheme === "dark") {
+  //     monaco.editor.setTheme("json-dark");
+  //   } else {
+  //     monaco.editor.setTheme("json-light");
+  //   }
+  // }, [resolvedTheme]); // runs every time theme changes
+
+  return <MonacoEditor height="90vh" defaultLanguage="json" theme={resolvedTheme === "dark" ? "vs-dark" : "light"} />;
 }
-
-export default CodeEditor;

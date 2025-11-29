@@ -10,7 +10,7 @@ export type ConversionBtnProps  =  {
 
 function ConversionButton({label,onClick,type,className,disabled=false}:ConversionBtnProps) {
   return (
-      <button className={`bg-[#1e1e1e] w-full h-10 text-2xl font-medium cursor-pointer ${className}`} disabled={disabled} type={type} onClick={onClick}>{label}</button>
+      <button className={` w-full h-10 bg-btncolor text-2xl font-medium cursor-pointer ${className}`} disabled={disabled} type={type} onClick={onClick}>{label}</button>
   )
 }
 
