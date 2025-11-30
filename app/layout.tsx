@@ -24,10 +24,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"
-    className="light"
-    suppressHydrationWarning
-    >
+    <html lang="en" className="light" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2L1T7813F2"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-2L1T7813F2');
+            `,
+          }}
+        />
+      </head>
+
       <body className={`antialiased w-full h-screen`}>
         <Providers>{children}</Providers>
       </body>
