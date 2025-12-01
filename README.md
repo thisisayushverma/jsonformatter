@@ -20,17 +20,140 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+# 📌 ROADMAP — JSON Formatter Improvement Plan
 
-To learn more about Next.js, take a look at the following resources:
+## 🧾 Overview
+This roadmap outlines the development phases for creating an advanced, developer-friendly **JSON Formatter & Data Conversion Tool**.  
+The goal is to evolve from a simple formatter into a **complete developer utility suite**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Phase 1 — Core (MVP)
+> Make JSON formatting reliable and easy to use.
 
-## Deploy on Vercel
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| Pretty print JSON | ⭐⭐⭐⭐⭐ | Essential |
+| Minify JSON | ⭐⭐⭐⭐⭐ | Essential |
+| Error detection & highlight | ⭐⭐⭐⭐⭐ | Must |
+| Copy to clipboard | ⭐⭐⭐⭐⭐ | UX |
+| Convert JSON → CSV + CSV download | ⭐⭐⭐⭐⭐ | Highly used in data workflows |
+| Light/Dark theme | ⭐⭐⭐⭐⭐ | Accessibility |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙ Phase 2 — Developer Experience Improvements
+> Make daily usage smooth and fast.
+
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| Auto-detect JSON on input | ⭐⭐⭐⭐⭐ | Saves time |
+| Auto-format on paste | ⭐⭐⭐⭐ | Very common request |
+| Code folding for large JSON | ⭐⭐⭐⭐ | Productivity |
+| Undo/Redo history | ⭐⭐⭐⭐ | Debugging |
+| Code line numbers | ⭐⭐⭐⭐ | Essential for large JSON |
+| Keyboard shortcuts | ⭐⭐⭐ | e.g., Ctrl + B to beautify |
+
+---
+
+## 🔄 Phase 3 — Import / Export & Conversions
+> Support wide real-world developer needs.
+
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| CSV → JSON | ⭐⭐⭐⭐⭐ | Reverse conversion |
+| Upload JSON/CSV file | ⭐⭐⭐⭐ | UX improvement |
+| Download JSON | ⭐⭐⭐ | Requested by many devs |
+| Save locally (LocalStorage) | ⭐⭐⭐ | Session restore |
+| YAML ↔ JSON | ⭐⭐ | DevOps usage |
+| XML → JSON | ⭐⭐ | Legacy systems |
+
+---
+
+## 🌐 Phase 4 — Sharing & Collaboration
+> Make JSON exchange easy between teams.
+
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| Share JSON via public link | ⭐⭐⭐⭐⭐ | Collaboration |
+| Copy sharable URL with preview | ⭐⭐⭐⭐ | Clean UX |
+| Live collaboration (Socket) | ⭐⭐⭐ | Advanced |
+| Embed widget for websites | ⭐⭐⭐ | SEO + adoption |
+| Export JSON to QR code | ⭐⭐ | Useful for mobile API testing |
+
+---
+
+## 🧠 Phase 5 — Smart Tools (Advanced)
+> Turn the formatter into a powerful dev tool.
+
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| JSON Diff comparison | ⭐⭐⭐⭐⭐ | Very high demand |
+| JSON Schema Validator | ⭐⭐⭐⭐⭐ | Backend necessity |
+| Generate TypeScript types from JSON | ⭐⭐⭐⭐⭐ | Used by most developers |
+| Generate Zod schema from JSON | ⭐⭐⭐⭐ | Type-safe validation |
+| API response formatter (paste URL) | ⭐⭐⭐⭐ | Postman-like behavior |
+| Search & Replace (Regex support) | ⭐⭐⭐ | For big JSON |
+| AI-based JSON fixer | ⭐⭐ | Future add-on |
+
+---
+
+## 📦 Phase 6 — Extensions / Integrations (Growth & Reach)
+> Expand usage into platforms developers use every day.
+
+| Feature | Priority | Notes |
+|--------|----------|-------|
+| Browser extension | ⭐⭐⭐⭐⭐ | Most-used improvement |
+| PWA (install as app) | ⭐⭐⭐⭐ | Higher retention |
+| VS Code extension | ⭐⭐⭐ | Long-term |
+| Public API for formatting | ⭐⭐ | Monetization + automation |
+
+---
+
+## ⭐ MOST USED / MOST REQUESTED FEATURES
+> If focusing on highest value to developers, build these first:
+
+| Rank | Feature |
+|------|---------|
+| #1 | JSON Diff Tool |
+| #2 | JSON → CSV & CSV → JSON |
+| #3 | JSON Schema Validator |
+| #4 | TypeScript Type Generator |
+| #5 | API Response Formatter (paste URL) |
+| #6 | Auto-format on paste |
+| #7 | Share JSON via link |
+
+---
+
+## 🔐 Optional Premium Features (Monetization)
+| Feature | Earning Model |
+|--------|----------------|
+| User login + cloud JSON storage | Subscription |
+| Team workspace | SaaS |
+| Public API for formatting | API billing |
+| Ad-free mode + unlimited share links | Paywall |
+| Swagger/Postman integration | High tier |
+
+---
+
+## 🎯 Final Vision
+✔ A fast, clean JSON editor  
+✔ Powerful conversions & diff tools  
+✔ Shareable + collaborative  
+✔ Browser & VS Code extensions  
+✔ Developer-first ecosystem  
+
+---
+
+## 📍 Status Tracking
+| Phase | Status | Next |
+|-------|--------|------|
+| Phase 1 | 🔄 In progress | Final polish & testing |
+| Phase 2 | ⏳ | Add auto-format + code folding |
+| Phase 3 | 📅 | CSV → JSON |
+| Phase 4 | 🔒 | After share-link system |
+| Phase 5 | 🔒 | JSON diff + TypeScript generator |
+| Phase 6 | 🔒 | Chrome extension |
+
+---
+
