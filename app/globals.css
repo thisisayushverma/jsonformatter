@@ -12,6 +12,7 @@
   --border: #E2E8F0;
   --highlight: #D0E7FF;
   --btnColor:#10B981;
+  --uploadFileClr:#3f3f3f;
 }
 
 /* DARK THEME */
@@ -27,6 +28,7 @@ html.dark {
   --border: #30363D;
   --highlight: #264653;
   --btnColor:#4B5563;
+  --uploadFileClr:#a5a5a5;
 }
 
 

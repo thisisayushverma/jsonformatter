@@ -11,9 +11,10 @@ const MonacoEditor = dynamic(() => import("@monaco-editor/react"), {
 export type EditorProps = {
   value: string;
   setValue: (v: string | JSON) => void;
+  language? : string 
 };
 
-export default function CodeEditor({ value, setValue }: EditorProps) {
+export default function CodeEditor({ value, setValue,language="json" }: EditorProps) {
   const { resolvedTheme } = useTheme();
 
   // useEffect(() => {
@@ -30,7 +31,7 @@ export default function CodeEditor({ value, setValue }: EditorProps) {
       height="90vh"
       value={value}
       onChange={(v: any) => setValue(v || "")}
-      defaultLanguage="json"
+      language={language}
       theme={resolvedTheme === "dark" ? "vs-dark" : "light"}
     />
   );

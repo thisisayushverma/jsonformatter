@@ -54,8 +54,6 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full p-2 flex flex-col">
-      
-
       {/* Parent flex container */}
       <div className="flex flex-1 gap-2">
         <div className="w-[40%] flex flex-col p-2 rounded-2xl overflow-hidden ">

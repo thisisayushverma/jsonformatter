@@ -10,7 +10,9 @@ function Navbar() {
     console.log(pathName);
   return (
       <div className="flex justify-between items-center h-16 px-4">
+        <Link href={"/"}>
         <h1 className="text-2xl font-bold tracking-wide">JSON Formatter</h1>
+        </Link>
         <div className="flex gap-4  items-center ">
           <Link href={"/csv-json"}>
             <ConversionButton label="CSV to JSON" className={`
