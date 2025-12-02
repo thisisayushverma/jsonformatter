@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import AnalyticsTracker from "./components/AnalyticsTracker";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,7 +110,10 @@ export default function RootLayout({
 
       <body className={`antialiased w-full h-screen`}>
         <AnalyticsTracker />
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar/>
+          {children}
+        </Providers>
       </body>
     </html>
   );
