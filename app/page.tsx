@@ -77,6 +77,7 @@ export default function Home() {
           /> */}
 
           <Copy value={outputJson} />
+          {/* <Copy value={outputJson} /> */}
 
           <CodeEditor value={outputJson} setValue={setOutputJson} />
         </div>
