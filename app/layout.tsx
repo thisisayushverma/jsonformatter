@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JSON Formatter",
+  title: "JSON Formatter | Fast Format, Validate & Convert JSON Online",
   description: "Change your JSON into beutify json",
 };
 
@@ -45,50 +45,55 @@ export default function RootLayout({
         />
 
         <title>
-          Free JSON Formatter & Validator Online | Beautify & Minify JSON
+          JSON Formatter | Format, Validate & Convert JSON Online Free
         </title>
+
         <meta
           name="description"
-          content="Free online JSON formatter and validator to beautify, minify, view, edit and share JSON instantly. Supports syntax highlighting and error detection."
+          content="Free online JSON formatter and validator to beautify, minify, view and edit JSON. Convert CSV, YAML & XML to JSON with syntax highlighting and error detection."
         />
-        <link rel="canonical" href="https://yourwebsite.com/" />
+
+        <link rel="canonical" href="https://json.ayushverma.dev/" />
+
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Ayush Verma" />
+        <meta
+          name="keywords"
+          content="JSON formatter, JSON validator, JSON beautifier, JSON minify, JSON editor, JSON prettify, CSV to JSON, YAML to JSON, XML to JSON, developer tools"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           property="og:title"
-          content="Free JSON Formatter & Validator Online"
+          content="JSON Formatter – Format, Validate & Convert JSON Online"
         />
         <meta
           property="og:description"
-          content="Format, minify, beautify, validate JSON with syntax highlighting and error detection."
+          content="Fast JSON formatting and validation with error detection. Convert CSV, YAML & XML to JSON online instantly."
         />
         <meta
           property="og:image"
-          content="https://yourwebsite.com/preview.png"
+          content="https://json.ayushverma.dev/preview.png"
         />
-        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:url" content="https://json.ayushverma.dev/" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Free JSON Formatter & Validator Online"
+          content="JSON Formatter – Format & Convert JSON Online"
         />
         <meta
           name="twitter:description"
-          content="Format, minify, beautify, validate JSON with syntax highlighting and sharing features."
+          content="Beautify, minify, validate JSON and convert CSV / YAML / XML to JSON instantly. Free developer tool."
         />
         <meta
           name="twitter:image"
-          content="https://yourwebsite.com/preview.png"
+          content="https://json.ayushverma.dev/preview.png"
         />
 
-        <meta name="author" content="Ayush Verma" />
-        <meta
-          name="keywords"
-          content="JSON formatter, JSON validator, JSON beautifier, JSON prettify, JSON minify, online JSON tool, JSON editor"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" />
 
         <script
           type="application/ld+json"
@@ -111,7 +116,7 @@ export default function RootLayout({
       <body className={`antialiased w-full h-screen`}>
         <AnalyticsTracker />
         <Providers>
-          <Navbar/>
+          <Navbar />
           {children}
         </Providers>
       </body>
