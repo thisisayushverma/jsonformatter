@@ -14,6 +14,18 @@ function Navbar() {
         <h1 className="text-2xl font-bold tracking-wide">JSON Formatter</h1>
       </Link>
       <div className="flex gap-4  items-center ">
+        <Link href={"/xml-json"}>
+            <ConversionButton
+              label="Xml to Json"
+              className={`
+              ${
+                pathName === "/xml-json"
+                  ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+              } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+            />
+          </Link>
+
         <Link href={"/yaml-json"}>
           <ConversionButton
             label="Yaml to Json"
