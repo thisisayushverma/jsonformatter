@@ -27,40 +27,40 @@ The goal is to evolve from a simple formatter into a **complete developer utilit
 ## 🚀 Phase 1 — Core (MVP)
 > Make JSON formatting reliable and easy to use.
 
-| Feature | Priority | Notes |
-|--------|----------|-------|
-| Pretty print JSON | ⭐⭐⭐⭐⭐ | Essential |
-| Minify JSON | ⭐⭐⭐⭐⭐ | Essential |
-| Error detection & highlight | ⭐⭐⭐⭐⭐ | Must |
-| Copy to clipboard | ⭐⭐⭐⭐⭐ | UX |
-| Convert JSON → CSV + CSV download | ⭐⭐⭐⭐⭐ | Highly used in data workflows |
-| Light/Dark theme | ⭐⭐⭐⭐⭐ | Accessibility |
+| Feature | Priority | Notes | Status |
+|--------|----------|-------|-------|
+| Pretty print JSON | ⭐⭐⭐⭐⭐ | Essential | Done|
+| Minify JSON | ⭐⭐⭐⭐⭐ | Essential | Done |
+| Error detection & highlight | ⭐⭐⭐⭐⭐ | Must | Done |
+| Copy to clipboard | ⭐⭐⭐⭐⭐ | UX | Done |
+| Convert JSON → CSV + CSV download | ⭐⭐⭐⭐⭐ | Highly used in data workflows | Done |
+| Light/Dark theme | ⭐⭐⭐⭐⭐ | Accessibility | Done |
 
 ---
 
 ## ⚙ Phase 2 — Developer Experience Improvements
 > Make daily usage smooth and fast.
 
-| Feature | Priority | Notes |
-|--------|----------|-------|
-| Auto-detect JSON on input | ⭐⭐⭐⭐⭐ | Saves time |
-| Auto-format on paste | ⭐⭐⭐⭐ | Very common request |
-| Code folding for large JSON | ⭐⭐⭐⭐ | Productivity |
-| Undo/Redo history | ⭐⭐⭐⭐ | Debugging |
-| Code line numbers | ⭐⭐⭐⭐ | Essential for large JSON |
-| Keyboard shortcuts | ⭐⭐⭐ | e.g., Ctrl + B to beautify |
+| Feature | Priority | Notes | Status |
+|--------|----------|-------|--------|
+| Auto-detect JSON on input | ⭐⭐⭐⭐⭐ | Saves time | Done |
+| Auto-format on paste | ⭐⭐⭐⭐ | Very common request | Done |
+| Code folding for large JSON | ⭐⭐⭐⭐ | Productivity | Done |
+| Undo/Redo history | ⭐⭐⭐⭐ | Debugging |  |
+| Code line numbers | ⭐⭐⭐⭐ | Essential for large JSON |  |
+| Keyboard shortcuts | ⭐⭐⭐ | e.g., Ctrl + B to beautify |  |
 
 ---
 
 ## 🔄 Phase 3 — Import / Export & Conversions
 > Support wide real-world developer needs.
 
-| Feature | Priority | Notes |
-|--------|----------|-------|
-| CSV → JSON | ⭐⭐⭐⭐⭐ | Reverse conversion |
-| Upload JSON/CSV file | ⭐⭐⭐⭐ | UX improvement |
-| Download JSON | ⭐⭐⭐ | Requested by many devs |
-| Save locally (LocalStorage) | ⭐⭐⭐ | Session restore |
+| Feature | Priority | Notes | Status |
+|--------|----------|-------|---------|
+| CSV → JSON | ⭐⭐⭐⭐⭐ | Reverse conversion | Done |
+| Upload JSON/CSV file | ⭐⭐⭐⭐ | UX improvement | Done |
+| Download JSON | ⭐⭐⭐ | Requested by many devs | Done |
+| Save locally (LocalStorage) | ⭐⭐⭐ | Session restore |  |
 | YAML ↔ JSON | ⭐⭐ | DevOps usage |
 | XML → JSON | ⭐⭐ | Legacy systems |
 
