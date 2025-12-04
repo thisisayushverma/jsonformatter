@@ -7,6 +7,7 @@ import Copy from "./components/Copy";
 import { jsonToCsv } from "./utils/jsonToCsv";
 import ThemeSwitch from "./components/ThemeSwitch";
 import Link from "next/link";
+import Feature from "./components/Feature";
 
 export default function Home() {
   const [inputJson, setInputJson] = useState<any>("");
@@ -57,6 +58,10 @@ export default function Home() {
       {/* Parent flex container */}
       <div className="flex flex-1 gap-2">
         <div className="w-[40%] flex flex-col p-2 rounded-2xl overflow-hidden ">
+        <div className='flex bg-highlight w-full h-7'>
+      
+      
+      </div>
           <CodeEditor value={inputJson} setValue={setInputJson} />
         </div>
 
@@ -75,7 +80,7 @@ export default function Home() {
           alt="copyImage" 
           className="h-6 w-6 absolute z-1 right-5 top-5 cursor-pointer"
           /> */}
-
+          <Feature output={outputJson}/>
           <Copy value={outputJson} />
           {/* <Copy value={outputJson} /> */}
 

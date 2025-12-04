@@ -13,6 +13,7 @@
   --highlight: #D0E7FF;
   --btnColor:#10B981;
   --uploadFileClr:#3f3f3f;
+  --featureBg:#373232;
 }
 
 /* DARK THEME */
@@ -29,6 +30,7 @@ html.dark {
   --highlight: #264653;
   --btnColor:#4B5563;
   --uploadFileClr:#a5a5a5;
+  --featureBg:#504848;
 }
 
 
@@ -38,6 +40,9 @@ html.dark {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-btncolor:var(--btnColor);
+  --color-featureBg:var(--featureBg);
+  --color-highlight:var(--highlight);
+  --color-text:var(--text);
 }
 /* 
 @media (prefers-color-scheme: dark) {
