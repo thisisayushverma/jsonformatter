@@ -50,6 +50,18 @@ function Navbar() {
           />
         </Link>
 
+        <Link href={"/json-schema-validator"}>
+          <ConversionButton
+            label="Validate Json Schema"
+            className={`
+            ${
+              pathName === "/json-schema-validator"
+                ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
+                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+            } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+          />
+        </Link>
+
         <ThemeSwitch />
         
       </div>
