@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://json.ayushverma.dev/sitemap.xml
