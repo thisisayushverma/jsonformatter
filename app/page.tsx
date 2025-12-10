@@ -8,13 +8,17 @@ import { jsonToCsv } from "./utils/jsonToCsv";
 import ThemeSwitch from "./components/ThemeSwitch";
 import Link from "next/link";
 import Feature from "./components/Feature";
+import UrlInput from "./components/UrlInput";
+import { handleGetResponse } from "./utils/apiRespone";
 
 export default function Home() {
   const [inputJson, setInputJson] = useState<any>("");
   const [outputJson, setOutputJson] = useState<any>("");
+  const [isModal,setIsModal] = useState<boolean>(false);
 
   const handleJSONFormatter = () => {
     try {
+      console.log(inputJson);
       const parsed = JSON.parse(inputJson);
       const formatted = JSON.stringify(parsed, null, 4);
       setOutputJson(formatted);
@@ -58,10 +62,29 @@ export default function Home() {
       {/* Parent flex container */}
       <div className="flex flex-1 gap-2">
         <div className="w-[40%] flex flex-col p-2 rounded-2xl overflow-hidden ">
-        <div className='flex bg-highlight w-full h-7'>
-      
-      
-      </div>
+          <div className="flex bg-highlight justify-end items-center px-2 w-full h-7">
+            <div className="cursor-pointer" onClick={()=> setIsModal(prev => !prev)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="size-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                />
+              </svg>
+            </div>
+          </div>
+          {
+            isModal?
+            <UrlInput onsubmit={(url) => handleGetResponse({url})} setInput={setInputJson}/>
+            : null
+          }
           <CodeEditor value={inputJson} setValue={setInputJson} />
         </div>
 
@@ -80,7 +103,7 @@ export default function Home() {
           alt="copyImage" 
           className="h-6 w-6 absolute z-1 right-5 top-5 cursor-pointer"
           /> */}
-          <Feature output={outputJson}/>
+          <Feature output={outputJson} />
           <Copy value={outputJson} />
           {/* <Copy value={outputJson} /> */}
 

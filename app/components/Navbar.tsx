@@ -22,7 +22,7 @@ function Navbar() {
                 pathName === "/xml-json"
                   ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
                   : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+              } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
             />
           </Link>
 
@@ -34,7 +34,7 @@ function Navbar() {
               pathName === "/yaml-json"
                 ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+            } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
           />
         </Link>
 
@@ -46,7 +46,7 @@ function Navbar() {
               pathName === "/csv-json"
                 ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+            } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
           />
         </Link>
 
@@ -58,7 +58,7 @@ function Navbar() {
               pathName === "/json-schema-validator"
                 ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+            } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
           />
         </Link>
 
@@ -70,9 +70,23 @@ function Navbar() {
               pathName === "/json-ts-types"
                 ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
                 : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-            } px-5 py-2 rounded-lg font-medium text-lg transition-all duration-200`}
+            } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
           />
         </Link>
+
+        {/* <Link href={"/json-zod"}>
+          <ConversionButton
+            label="Json to Zod"
+            className={`
+            ${
+              pathName === "/json-zod"
+                ? "bg-[#595858] text-[#e7e5e5] border border-gray-500 scale-105 shadow-md"
+                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+            } px-3 py-1 rounded-lg font-medium text-lg transition-all duration-200`}
+          />
+        </Link> */}
+
+        
 
         <ThemeSwitch />
         
