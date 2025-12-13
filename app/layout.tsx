@@ -49,6 +49,7 @@ export default function RootLayout({
           JSON Formatter | Format, Validate & Convert JSON Online Free
         </title>
 
+        <meta name="google-adsense-account" content="ca-pub-2690113099326425">
         <meta
           name="description"
           content="Free online JSON formatter and validator to beautify, minify, view and edit JSON. Convert CSV, YAML & XML to JSON with syntax highlighting and error detection."
